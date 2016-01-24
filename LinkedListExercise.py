@@ -16,10 +16,16 @@ class LinkedList(object):
         self.head = self.tail = head
     
     def append(self, data):
-        pass
+        if(self.head is None):
+            self.head = self.tail = Node(data)
+        else:
+            self.tail = Node(data, self.tail)
     
     def prepend(self, data):
-        pass
+        if(self.head is None):
+            self.head = self.tail = Node(data)
+        else:
+            pass
     
     def deleteFirst(self):
         pass
@@ -35,3 +41,4 @@ class LinkedList(object):
         
     def get(self, position):
         pass
+        
