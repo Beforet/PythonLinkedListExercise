@@ -8,12 +8,12 @@ position 1.
 
 class Node(object):
     def __init__(self, data, next = None):
-        this.data = data
-        this.next = next
+        self.data = data
+        self.next = next
         
 class LinkedList(object):
     def __init__(self, head = None):
-        pass
+        self.head = self.tail = head
     
     def append(self, data):
         pass
