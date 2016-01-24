@@ -20,6 +20,7 @@ def test_delete_last():
     list = make_test_list()
     list.deleteLast()
     assert list.tail.data == 3
+    assert list.tail.next is None
     
 def test_get():
     list = make_test_list()
