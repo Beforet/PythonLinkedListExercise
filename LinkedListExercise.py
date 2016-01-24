@@ -19,16 +19,21 @@ class LinkedList(object):
         if(self.head is None):
             self.head = self.tail = Node(data)
         else:
-            self.tail = Node(data, self.tail)
+            node = Node(data)
+            self.tail.next = node
+            self.tail = node
     
     def prepend(self, data):
         if(self.head is None):
             self.head = self.tail = Node(data)
         else:
-            pass
+            self.head = Node(data, self.head)
     
     def deleteFirst(self):
-        pass
+        if(self.head is None):
+            raise Exception("List is not initialized")
+        else:
+            self.head = self.head.next
     
     def deleteLast(self):
         pass
